@@ -1,0 +1,18 @@
+*{
+    /* background-color: lightgoldenrodyellow; */
+    padding: 12px;
+}
+
+#temarioProgreso{
+    background-color: lightgoldenrodyellow;
+
+}
+
+.galeria{
+    background-color: lightblue;
+    margin-top: 18px; 
+}
+
+.galeria img{
+    height: 250px;
+}

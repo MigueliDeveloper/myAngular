@@ -8,7 +8,6 @@ import { CursoComponent } from './curso/curso.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
-import { ProfesoreComponent } from './profesore/profesore.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
@@ -22,7 +21,6 @@ import { FormularioConsultaComponent } from './formulario-consulta/formulario-co
     AlumnosComponent,
     AlumnoComponent,
     ProfesoresComponent,
-    ProfesoreComponent,
     ProfesorComponent,
     FormularioAccesoComponent,
     FormularioRegistroComponent,

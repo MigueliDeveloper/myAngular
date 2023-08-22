@@ -10,13 +10,13 @@ export class CursoComponent {
   public nombre: string
   public listado: string
   public descripcion: string
-  public progreso: number = 0
+  public progreso: number
 
   constructor(){
     this.nombre= "Programación"
     this.listado= "Listado de Curso"
     this.descripcion = "Aprende a programar desde cero"
-
+    this.progreso= 0
   }
 
   eligirCurso(){
@@ -32,12 +32,12 @@ export class CursoComponent {
 
   }
 
-  calcularProgreso(){
-    // Calcular el progreso en función de las lecciones completadas
-    const leccionesCompletadas = 3; // Supongamos que se han completado 3 lecciones
-    const totalLecciones = this.lecciones.length;
+  // calcularProgreso(){
+  //   // Calcular el progreso en función de las lecciones completadas
+  //   const leccionesCompletadas = 3; // Supongamos que se han completado 3 lecciones
+  //   const totalLecciones = this.lecciones.length;
 
-  }
+  // }
 
   /**
    * Progreso curso
