@@ -16,6 +16,23 @@
 </div>
 
 <div>
+  <p>Profesor Asignado</p>
+  <h2>{{nombreProfesor}}</h2>
+  <img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
+
+  <ul>
+    <li *ngFor="let listado of alumnosAll">
+      {{listado.nombreA}}-{{listado.apellidoA}}
+      <span *ngif="listado.estadoA != false">MATRICULADO</span>
+    </li>
+  </ul>
+
+
+
+
+  <h2>{{nombre}}</h2>
+  <h3>{{listado}}</h3>
+
   <button (click)="cambiarTitulo()">Cambiar Titulo</button>
   <div class="galeria">
     <img src="{{imagen+1}}" alt="Imagen de muestra">
