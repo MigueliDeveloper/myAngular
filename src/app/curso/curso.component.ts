@@ -7,16 +7,20 @@ import { Component } from '@angular/core';
 })
 export class CursoComponent {
 
-  public nombre: string
+  public nombreCurso: string
   public listado: string
   public descripcion: string
   public progreso: number
+  public duracion: number
+  public temario: string
 
   constructor(){
-    this.nombre= "Programación"
+    this.nombreCurso= "Programación"
     this.listado= "Listado de Curso"
     this.descripcion = "Aprende a programar desde cero"
     this.progreso= 0
+    this.duracion = 0
+    this.temario= ""
   }
 
   eligirCurso(){
@@ -24,7 +28,7 @@ export class CursoComponent {
   }
 
   cambiarTitulo(){
-    this.nombre= "Programacion en Angular"
+    this.nombreCurso= "Programacion en Angular"
   }
 
   iniciarCurso(){

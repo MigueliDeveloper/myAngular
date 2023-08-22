@@ -27,8 +27,16 @@
     </li>
   </ul>
 
+  <p>La nota media final es:</p>
 
+  <ul [ngSwitch]="notAlumno">
+    <li *nSwitchCase="5">Aprobado</li>
+    <li *nSwitchCase="4">No Aprobado</li>
+    <li *nSwitchCase="7">Aprobado</li>
 
+    </li>
+
+  </ul>
 
   <h2>{{nombre}}</h2>
   <h3>{{listado}}</h3>

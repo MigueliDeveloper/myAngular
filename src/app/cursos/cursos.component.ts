@@ -20,9 +20,10 @@ export class CursosComponent implements OnInit{
   public temario: string[] // lecciones
   public progreso: number
   public imagen: string // Manuel
-
+  public notaAlumno: number
 
   constructor(){
+    this.notaAlumno= 5
     this.nombreProfesor = profesorBase.nombre
     this.fotoProfesor = profesorBase.foto
     this.nombre="Mi curso de Programación"
@@ -34,10 +35,9 @@ export class CursosComponent implements OnInit{
     this.alumnosAll=[
       new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
       
-      new alumnosBD("Javier", "Ramírez", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", true)
+      new alumnosBD("Javier", "Diaz", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", false)
     ]
 
-  
   }
   
   ngOnInit(){

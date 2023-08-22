@@ -3,6 +3,7 @@ export var profesorBase = {
     apellidos: "M.P.",
     correo: "manuelmacpe@gmail.com",
     foto:"./assets/media/fotommp.jpg"
+    
 }
 
 export class alumnosBD{
@@ -16,9 +17,5 @@ export class alumnosBD{
         public fotoA: String,
         public estadoA: boolean,
         
-        ){}
-
-
-
-
+    ){}
 }
