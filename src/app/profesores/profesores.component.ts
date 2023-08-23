@@ -6,10 +6,18 @@ import { profesoresBD } from '../Models/profesores';
   templateUrl: './profesores.component.html',
   styleUrls: ['./profesores.component.css']
 })
+
 export class ProfesoresComponent {
   public profesoresAll: Array<profesoresBD>
+  public nombresProfesores: string
+  public apellidosProfesores: string
+  public cursosProfesores: string
 
+  constructor(){
 
-
-  constructor()
+    this.profesoresAll=[]
+    this.nombresProfesores= ""
+    this.apellidosProfesores= ""
+    this.cursosProfesores= ""
+  }
 }

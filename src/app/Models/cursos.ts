@@ -1,4 +1,3 @@
-
 export class cursosBD{
     //Nombre, Descripción, Duración
     constructor(

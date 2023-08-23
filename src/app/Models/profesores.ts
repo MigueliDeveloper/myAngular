@@ -4,9 +4,7 @@ export class profesoresBD{
         public apellidoP: String,
         public correo: String,
         public foto: String,
-
     ){}
 
    
-
 }

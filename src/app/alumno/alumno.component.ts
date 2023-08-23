@@ -11,12 +11,17 @@ export class AlumnoComponent {
   public alumnosAll: Array<alumnosBD>
   public nombreAlumno: string
   public apellidoAlumno: string
+  public edad: number
+  public correoElectronico: string
   public notaAlumno: number
+ 
   
   constructor(){
 
     this.nombreAlumno=""
     this.apellidoAlumno=""
+    this.edad = 0
+    this.correoElectronico= ""
     this.notaAlumno= 5
     this.alumnosAll=[
       new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
@@ -26,7 +31,7 @@ export class AlumnoComponent {
     ]
   }
 
-  calificacionalumno(){}
+  verCalificacionalumno(){}
 
   
 }

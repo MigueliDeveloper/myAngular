@@ -5,7 +5,6 @@ export var profesorBase = {
     foto:"./assets/media/fotommp.jpg"
     
 }
-
 export class alumnosBD{
 
     constructor(
