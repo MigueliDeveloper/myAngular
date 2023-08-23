@@ -1,1 +1,17 @@
-<p>formulario-consulta works!</p>
+<form action="" method="POST" id="formulario" onsubmit="return false">
+   <label for="nombre">Nombre</label>
+   <input type="text" name="name" id="nonbre" required maxlength="50"><br>
+   <span id="errorNombre"></span>
+        
+   <label form="email">Correo Electrónico: </label>
+   <input type="text" id="asunto" name="asunto" required>
+
+    <label for="asunto">Asunto:</label>
+    <input type="text" id="asunto" name="asunto" required>
+
+    <label for="mensaje">Mensaje:</label>
+    <textarea name="mensaje" id="mensaje" cols="4" rows="4"></textarea>
+
+    <button id="botonAnadir" onclick="anadir()">Enviar</button>
+    
+</form>
