@@ -6,7 +6,7 @@ import { profesoresBD } from '../Models/profesores';
   styleUrls: ['./profesor.component.css']
 })
 
-export class ProfesorComponent {
+export class ProfesorComponent implements OnInit{
 
   public profesorAll: Array<profesoresBD>
   public nombreProfesor: string
@@ -18,6 +18,11 @@ export class ProfesorComponent {
     this.nombreProfesor= ""
     this.apellidoProfesor= ""
     this.cursoProfesor= ""
+  }
+
+  ngOnInit(){
+    console.log("OnInit Ejecutado")
+
   }
 
 

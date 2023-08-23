@@ -3,6 +3,7 @@ import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
 
 
+
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
@@ -21,8 +22,12 @@ export class CursosComponent implements OnInit{
   public progreso: number
   public imagen: string // Manuel
   public notaAlumno: number
+  public registrado: boolean
+  public nota: number
+  public posicion: number
 
   constructor(){
+    this.nota= 0
     this.notaAlumno= 5
     this.nombreProfesor = profesorBase.nombre
     this.fotoProfesor = profesorBase.foto
@@ -34,20 +39,39 @@ export class CursosComponent implements OnInit{
     this.imagen= "https://thecatapi.com/api/images/get?format=src&type=gif?results_per_page"
     this.alumnosAll=[
       new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
-      
       new alumnosBD("Javier", "Diaz", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", false)
     ]
+
+    this.posicion=this.alumnosAll.length
+
+
+    this.registrado= false
 
   }
   
   ngOnInit(){
     console.log("OnInit Ejecutado")
-
+    console.log(this.alumnosAll)
+    console.log(this.posicion)
   }
 
   cambiarTitulo(){
     this.nombre= "Programacion Angular"
 
+  }
+
+  setRegistrado(){
+    this.registrado= true
+
+  }
+
+  unsetRegistrado(){
+    this.registrado= false
+  }
+
+  Registrado(){
+
+    
   }
   iniciarCurso(){
     // Realizar tareas de inicio del curso

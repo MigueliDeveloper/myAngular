@@ -9,6 +9,7 @@ import { alumnosBD } from '../Models/alumnos';
 export class AlumnoComponent {
 
   public alumnosAll: Array<alumnosBD>
+  public cursosMatriculado: [][]
   public nombreAlumno: string
   public apellidoAlumno: string
   public edad: number
@@ -22,6 +23,7 @@ export class AlumnoComponent {
     this.apellidoAlumno=""
     this.edad = 0
     this.correoElectronico= ""
+    this.cursosMatriculado= [[], []]
     this.notaAlumno= 5
     this.alumnosAll=[
       new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),

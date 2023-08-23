@@ -1,14 +1,24 @@
 <div>
+
+    <p>Profesor del Curso</p>
+    <h2>{{nombreProfesor}}</h2>
+    <img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
+
     <h1>{{nombreCurso}}</h1>
-    <p>{{listado}}</p>
+    <ul>
+        <li>{{duracion}}</li>
+        <li>{{temarioCurso}}</li>
+        <li>{{descripcion}}</li>
+    </ul>
 
-    <h2>{{descripcion}}</h2>
-    <p>{{progreso}}</p>
+    <h2>Alumnos del Curso</h2>
+    <ul>
+        <li *ngFor="let listado of alumnosAll">
+            {{listado.nombreA}}--{{listado.apellidoA}}
 
-    <p>{{duracion}}</p>
-    <p>{{temario}}</p>
-
-    <button (click)="iniciarCurso()">Iniciar Curso</button>
+        </li>
+    </ul>
+<!-- <button (click)="iniciarCurso()">Iniciar Curso</button> -->
 
 
 </div>

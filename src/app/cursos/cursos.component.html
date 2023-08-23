@@ -1,5 +1,5 @@
 <div id="temarioProgreso">
-    <h1></h1>
+    <h1>Ficha de Cursos</h1>
 
     <p>{{ descripcion }}</p>
   
@@ -20,6 +20,10 @@
   <h2>{{nombreProfesor}}</h2>
   <img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
 
+  <p>Añadir Nota</p>
+  <input type="number" [(ngModel)]="nota">
+  <p>{{nota}}</p>
+
   <ul>
     <li *ngFor="let listado of alumnosAll">
       {{listado.nombreA}}-{{listado.apellidoA}}
@@ -29,13 +33,10 @@
 
   <p>La nota media final es:</p>
 
-  <ul [ngSwitch]="notAlumno">
+  <ul [ngSwitch]="notaAlumno">
     <li *nSwitchCase="5">Aprobado</li>
     <li *nSwitchCase="4">No Aprobado</li>
     <li *nSwitchCase="7">Aprobado</li>
-
-    </li>
-
   </ul>
 
   <h2>{{nombre}}</h2>
@@ -50,3 +51,16 @@
     <img src="{{imagen+5}}" alt="Imagen de muestra">
   </div>
 </div>
+
+<!-- [ng-template] -->
+<div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
+
+<ng-template #Siregistrado>
+  <p>Estás registrado en la aplicación</p>
+  <button (click)="unsetRegistrado()"></button>
+</ng-template>
+<ng-template #Noregistrado>
+    <p>No estas registrado, pulsa este botón para identificarte</p>
+    <button (click)="setRegistrado()"></button>
+
+</ng-template>

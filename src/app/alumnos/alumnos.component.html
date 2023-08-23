@@ -1,8 +1,18 @@
 <div>
-    <h1></h1>
-    <p></p>
+    <h1>Ficha de los Alumnos del centro</h1>
+    <ul>
+        <li *ngFor="let listado of alumnosAll">
+          {{listado.nombreA}}-{{listado.apellidoA}}
+          <span *ngif="listado.estadoA != false">MATRICULADO</span>
+        </li>
+      </ul>
+      <p>La nota media final es:</p>
 
-    <h2></h2>
+      <ul [ngSwitch]="notasAlumnos">
+        <li *nSwitchCase="5">Aprobado</li>
+        <li *nSwitchCase="4">No Aprobado</li>
+        <li *nSwitchCase="7">Aprobado</li>
+      </ul>
 
     <p></p>
 
