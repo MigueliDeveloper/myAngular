@@ -33,5 +33,4 @@ export class AlumnoComponent {
 
   verCalificacionalumno(){}
 
-  
 }
