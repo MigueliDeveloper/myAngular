@@ -6,11 +6,11 @@
       <div *ngFor="let alumnos of alumnosAll">
         <img [src]="alumnos.fotoA" alt="Foto del alumno">
 
-        <h3>{{ alumnos.nombreA }} {{ alumnos.apellidoA}}</h3>
-        <p>Edad: {{alumnos.edadA}}</p>
-        <p>Correo: {{ alumnos.correoA }}</p>
-        <p>Teléfono: {{ alumnos.telefonoA}}</p>
-        <p>Estado: {{ alumnos.estadoA ? 'Activo' : 'Inactivo' }}</p>
+        <h3 class="nombreAlumnos">{{ alumnos.nombreA }} {{ alumnos.apellidoA}}</h3>
+        <p class="atributosAlumnos">Edad: {{alumnos.edadA}}</p>
+        <p class="atributosAlumnos">Correo: {{ alumnos.correoA }}</p>
+        <p class="atributosAlumnos">Teléfono: {{ alumnos.telefonoA}}</p>
+        <p class="atributosAlumnos">Estado: {{ alumnos.estadoA ? 'Activo' : 'Inactivo' }}</p>
 
       </div>
 
@@ -33,5 +33,5 @@
     <p></p>
 
     <button class="editar">Editar</button>
-    <button class>Eliminar</button>
+    <button class="eliminar">Eliminar</button>
 </div>
