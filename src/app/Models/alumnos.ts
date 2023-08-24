@@ -11,7 +11,7 @@ export class alumnosBD{
         public nombreA: String,
         public apellidoA: String,
         public edadA: number,
-        public correeoA: String,
+        public correoA: String,
         public telefonoA: String,
         public fotoA: String,
         public estadoA: boolean,

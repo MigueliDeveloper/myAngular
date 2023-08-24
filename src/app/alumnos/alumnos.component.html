@@ -1,5 +1,21 @@
-<div>
-    <h1>Ficha de los Alumnos del centro</h1>
+<div id="alumnosContainer">
+
+    <div class="alumnoFicha">
+      <h1 class="alumnoEnunciado">Ficha de los Alumnos del centro</h1>
+    
+      <div *ngFor="let alumnos of alumnosAll">
+        <img [src]="alumnos.fotoA" alt="Foto del alumno">
+
+        <h3>{{ alumnos.nombreA }} {{ alumnos.apellidoA}}</h3>
+        <p>Edad: {{alumnos.edadA}}</p>
+        <p>Correo: {{ alumnos.correoA }}</p>
+        <p>Teléfono: {{ alumnos.telefonoA}}</p>
+        <p>Estado: {{ alumnos.estadoA ? 'Activo' : 'Inactivo' }}</p>
+
+      </div>
+
+    </div>
+    
     <ul>
         <li *ngFor="let listado of alumnosAll">
           {{listado.nombreA}}-{{listado.apellidoA}}
@@ -16,5 +32,6 @@
 
     <p></p>
 
-    <button></button>
+    <button class="editar">Editar</button>
+    <button class>Eliminar</button>
 </div>

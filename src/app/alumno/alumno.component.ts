@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { alumnosBD } from '../Models/alumnos';
 
 @Component({
@@ -6,7 +6,7 @@ import { alumnosBD } from '../Models/alumnos';
   templateUrl: './alumno.component.html',
   styleUrls: ['./alumno.component.css']
 })
-export class AlumnoComponent {
+export class AlumnoComponent implements OnInit{
 
   public alumnosAll: Array<alumnosBD>
   public cursosMatriculado: [][]
@@ -31,6 +31,10 @@ export class AlumnoComponent {
       new alumnosBD("Chris", "Diaz", 24, "chris@gmail.com", "8975643", "./assets/media/fotommp.jpg", true),
       new alumnosBD("Ana", "Quesada", 25, "ana@gmail.com", "8975643", "./assets/media/fotommp.jpg", false)
     ]
+  }
+
+  ngOnInit(){
+    console.log("OnInit Ejecutado")
   }
 
   verCalificacionalumno(){}
