@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { FormsModule } from '@angular/forms';
 // Impotar Componentes
 import { CursoComponent } from './curso/curso.component';
 import { CursosComponent } from './cursos/cursos.component';
@@ -13,16 +15,17 @@ import { FormularioConsultaComponent } from './formulario-consulta/formulario-co
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 
 const routes: Routes = [
+// Solamente se van a usar los plurales
   { path: '', component: AppComponent },
   { path: 'curso', component: CursoComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'alumnos', component: AlumnosComponent },
   { path: 'alumno', component: AlumnoComponent },
   { path: 'profesor', component: ProfesorComponent },
-  { path: 'profesores', component: ProfesoresComponent},
-  { path: 'formularioAcceso', component: FormularioAccesoComponent},
-  { path: 'formularioConsulta', component: FormularioConsultaComponent},
-  { path: 'FormularioRegistro', component: FormularioRegistroComponent}
+  { path: 'profesores', component: ProfesoresComponent },
+  { path: 'formularioAcceso', component: FormularioAccesoComponent },
+  { path: 'formularioConsulta', component: FormularioConsultaComponent },
+  { path: 'FormularioRegistro', component: FormularioRegistroComponent }
 ];
 
 @NgModule({
