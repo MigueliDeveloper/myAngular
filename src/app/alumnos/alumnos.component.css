@@ -17,8 +17,7 @@
 
 }
 
-/* Estilos generales
-.alumnoFicha {
+#alumnoalumnosContainer .alumnoFicha {
     width: 300px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -27,7 +26,7 @@
   }
   
   /* Estilos para el nombre del alumno */
-  .alumno-ficha .nombre {
+  .alumno-ficha .nombrelumno {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
