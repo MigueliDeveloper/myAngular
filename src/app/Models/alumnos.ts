@@ -6,15 +6,19 @@ export var profesorBase = {
     
 }
 export class alumnosBD{
+    static correoA(correoA: any) {
+      throw new Error('Method not implemented.');
+    }
 
     constructor(
-        public nombreA: String,
-        public apellidoA: String,
+        public nombreA: string,
+        public apellidoA: string,
         public edadA: number,
-        public correoA: String,
-        public telefonoA: String,
-        public fotoA: String,
+        public correoA: string,
+        public telefonoA: string,
+        public fotoA: string,
         public estadoA: boolean,
+        public notaA: number
         
     ){}
 }

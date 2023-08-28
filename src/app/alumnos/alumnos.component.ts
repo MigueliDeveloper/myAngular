@@ -1,46 +1,54 @@
 import { Component, OnInit } from '@angular/core';
-import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
-import { CursosService } from '../servicios/alumnos.service';
+import { AlumnosService} from '../servicios/alumnos.service';
 
 
 @Component({
   selector: 'app-alumnos',
   templateUrl: './alumnos.component.html',
-  styleUrls: ['./alumnos.component.css']
-  providers
+  styleUrls: ['./alumnos.component.css'],
+  providers: [AlumnosService]
 })
 
 export class AlumnosComponent implements OnInit{
 
-  public alumnosAll: alumnosBD[];
-  public nombresAlumnos: string;
+  public alumnosAll: Array<alumnosBD>;
+  public nombreAlumnos: string;
   public apellidosAlumnos: string;
-  public correoElectronico: string;
-  public notasAlumnos: number;
+  public correoElectronico: string[]= [];
+  public notasAlumnos: number= 5;
+  public registrado: boolean = false;
+  public fotoAlumno: string;
 
-  constructor(private _cursosService: CusosService){
-    this.nombresAlumnos="";
+  constructor(private _alumnosService: AlumnosService){
+
+    this.alumnosAll = new Array<alumnosBD>()
+    this.nombreAlumnos="";
     this.apellidosAlumnos="";
-    this.correoElectronico="";
-    this.notasAlumnos= 5;
-    this.alumnosAll=[];
+    this.fotoAlumno= ""
+    
   }
 
   ngOnInit(){
-    console.log("OnInit Ejecutado")
-    this.inicializarAlumnos();
+    this.alumnosAll = this._alumnosService.getAlumnos();
+    this.getcorreosEle();
   }
 
-  private inicializarAlumnos(){
-    this.alumnosAll =[
-      new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
-      new alumnosBD("Javier", "Diaz", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", true),
-      new alumnosBD("Chris", "Diaz", 24, "chris@gmail.com", "8975643", "./assets/media/fotommp.jpg", true),
-      new alumnosBD("Ana", "Quesada", 25, "ana@gmail.com", "8975643", "./assets/media/fotommp.jpg", false)
-    ];
-
+  getcorreosEle() {
+    this.alumnosAll.forEach((alumno) =>{
+      this.correoElectronico.push(alumno.correoA);
+    });
+    console.log(this.correoElectronico)
   }
 
+  setRegistrado() {
+    this.registrado = true;
+  }
+
+  unsetRegistrado() {
+    this.registrado = false;
+  }
+
+  
 }
 
