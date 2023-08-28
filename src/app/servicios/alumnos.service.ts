@@ -17,13 +17,11 @@ export class AlumnosService {
         }
 
     getTexto(){
-        return "Texto desde un servicio"
-
+      return "Texto desde un servicio"
     }
 
     getAlumnos(): Array<alumnosBD>{
         return this.alumunosall
-
     }
 
 }

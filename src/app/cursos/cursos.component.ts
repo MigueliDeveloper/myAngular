@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
+import { profesoresBD } from '../Models/profesores';
+import { cursosBD } from '../Models/cursos';
 
 
 
@@ -35,7 +37,7 @@ export class CursosComponent implements OnInit{
     this.descripcion= "Aprende a programar desde cero"
     this.listado= "Listado de Cursos"
     this.temario= ["Introducción a la programación", "Variables y tipos de datos", "Estructuras de control"]
-    this.progreso= 0  
+    this.progreso= 0
     this.imagen= "https://thecatapi.com/api/images/get?format=src&type=gif?results_per_page"
     this.alumnosAll=[
       new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
@@ -48,7 +50,7 @@ export class CursosComponent implements OnInit{
     this.registrado= false
 
   }
-  
+
   ngOnInit(){
     console.log("OnInit Ejecutado")
     console.log(this.alumnosAll)
@@ -71,7 +73,7 @@ export class CursosComponent implements OnInit{
 
   Registrado(){
 
-    
+
   }
   iniciarCurso(){
     // Realizar tareas de inicio del curso
@@ -86,5 +88,5 @@ export class CursosComponent implements OnInit{
     this.progreso = (leccionesCompletadas / totalLecciones) * 100
   }
 
-      
+
 }
