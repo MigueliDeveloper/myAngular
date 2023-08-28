@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
+import { CursosService } from '../servicios/alumnos.service';
+
 
 @Component({
   selector: 'app-alumnos',
   templateUrl: './alumnos.component.html',
   styleUrls: ['./alumnos.component.css']
+  providers
 })
 
 export class AlumnosComponent implements OnInit{
@@ -15,7 +19,7 @@ export class AlumnosComponent implements OnInit{
   public correoElectronico: string;
   public notasAlumnos: number;
 
-  constructor(){
+  constructor(private _cursosService: CusosService){
     this.nombresAlumnos="";
     this.apellidosAlumnos="";
     this.correoElectronico="";
