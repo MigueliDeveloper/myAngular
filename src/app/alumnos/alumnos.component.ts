@@ -26,7 +26,7 @@ export class AlumnosComponent implements OnInit{
     this.nombreAlumnos="";
     this.apellidosAlumnos="";
     this.fotoAlumno= ""
-    
+
   }
 
   ngOnInit(){
@@ -49,6 +49,5 @@ export class AlumnosComponent implements OnInit{
     this.registrado = false;
   }
 
-  
 }
 
