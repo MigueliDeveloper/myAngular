@@ -3,56 +3,85 @@ import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
 import { profesoresBD } from '../Models/profesores';
 import { cursosBD } from '../Models/cursos';
-
-
+import { CursosService } from '../servicios/cursos.service';
 
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  styleUrls: ['./cursos.component.css'],
+  providers: [CursosService]
 })
 
 export class CursosComponent implements OnInit{
 
+  public cursosAll: Array<cursosBD>;
   public alumnosAll: Array<alumnosBD>
+  public profesoresAll: Array<profesoresBD>;
+  public nombreCursos: string // Manuel
   public nombreProfesor: string
   public fotoProfesor: string
-  public nombre: string // Manuel
+  public duracionCursos: number
   public descripcion: string
   public listado: string // Manuel
   public temario: string[] // lecciones
   public progreso: number
   public imagen: string // Manuel
-  public notaAlumno: number
+  // public notaAlumno: number //va en curso
   public registrado: boolean
-  public nota: number
+  public notasAlumnos: number = 5
   public posicion: number
 
-  constructor(){
-    this.nota= 0
-    this.notaAlumno= 5
+  constructor(private  _cursosServices: CursosService){
+    this.cursosAll = new Array<cursosBD>()
+    this.alumnosAll = new Array<alumnosBD>()
+    this.profesoresAll = new Array<profesoresBD>()
     this.nombreProfesor = profesorBase.nombre
     this.fotoProfesor = profesorBase.foto
-    this.nombre="Mi curso de Programación"
+    this.nombreCursos="Cursos Programación"
     this.descripcion= "Aprende a programar desde cero"
+    this.duracionCursos= 0;
     this.listado= "Listado de Cursos"
     this.temario= ["Introducción a la programación", "Variables y tipos de datos", "Estructuras de control"]
     this.progreso= 0
     this.imagen= "https://thecatapi.com/api/images/get?format=src&type=gif?results_per_page"
-    this.alumnosAll=[
-      new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
-      new alumnosBD("Javier", "Diaz", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", false)
-    ]
 
     this.posicion=this.alumnosAll.length
-
-
     this.registrado= false
+
+  }
+
+  getNombreCursos(){
+    this.cursosAll.forEach((curso) =>{
+      this.nombreCursos.push(curso.nombreC);
+    });
+
+    console.log(this.nombreCursos);
+  }
+
+  getDuracionCursos(){
+
+    this.cursosAll.forEach((curso) => {
+      this.duracionCursos.push(curso.duracionC);
+    });
+
+    console.log(this.duracionCursos)
+  }
+
+  getNombreProfesores(){
+    this.cursosAll.forEach((nombreProfesor) =>{
+      this.nombreProfesor.push(nombreProfesor.nombreProfesor)
+    })
+  }
+
+  getNombreAlumnos(){
+    
+
 
   }
 
   ngOnInit(){
     console.log("OnInit Ejecutado")
+    this.cursosAll = this._cursosServices.getCursos();
     console.log(this.alumnosAll)
     console.log(this.posicion)
   }
@@ -75,6 +104,8 @@ export class CursosComponent implements OnInit{
 
 
   }
+
+
   iniciarCurso(){
     // Realizar tareas de inicio del curso
     this.calcularProgreso()

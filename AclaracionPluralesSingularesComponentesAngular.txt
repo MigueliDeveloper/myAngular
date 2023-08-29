@@ -1,0 +1,13 @@
+La carpeta "alumno" generalmente contendría componentes, servicios y otros archivos relacionados con un único alumno.
+Por ejemplo, podría haber un componente "alumno-detalle" que muestra los detalles de un alumno específico.
+Por otro lado, la carpeta "alumnos" se utiliza para almacenar componentes, servicios y otros archivos
+relacionados con la gestión de múltiples alumnos. Aquí podrías encontrar componentes como "alumnos-lista"
+ que muestra una lista de todos los alumnos o "alumnos-formulario" para agregar o editar alumnos.
+Lo mismo se aplica a la carpeta "profesor" y "profesores". La carpeta "profesor" podría contener componentes
+y servicios relacionados con un único profesor, mientras que la carpeta "profesores" se utilizaría para
+la gestión de múltiples profesores.
+Esta estructura ayuda a organizar el código de manera más clara y coherente,
+ya que separa las responsabilidades de los componentes y servicios según su relación con los objetos
+ en el sistema. Además, facilita la escalabilidad y el mantenimiento del código a medida que la
+ aplicación crece.
+Espero que esta explicación te haya sido útil. Si tienes alguna otra pregunta, no dudes en hacerla.
