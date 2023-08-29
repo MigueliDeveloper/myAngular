@@ -1,18 +1,24 @@
 import { Component, OnInit} from '@angular/core';
 import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
+import { profesoresBD } from '../Models/profesores';
+import { cursosBD } from '../Models/cursos';
+import { CursosService } from '../servicios/cursos.service';
 import { AlumnosService } from '../servicios/alumnos.service';
+import { ProfesoresService } from '../servicios/profesores';
 
 @Component({
   selector: 'app-curso',
   templateUrl: './curso.component.html',
   styleUrls: ['./curso.component.css'],
-  providers: [AlumnosService]
+  providers: [CursosService, AlumnosService, ProfesoresService]
 })
 
 export class CursoComponent implements OnInit{
 
+  public cursosAll: Array<cursosBD>;
   public alumnosAll: Array<alumnosBD>
+  public profesoresAll: Array<profesoresBD>;
   public nombreCurso: string
   public nombreProfesor: string
   public fotoProfesor: string
@@ -24,18 +30,19 @@ export class CursoComponent implements OnInit{
   public notaAlumno: number
 
 
-  constructor(){
-    this.alumnosAll=[
-      new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
-
-      new alumnosBD("Javier", "Diaz", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", false)
-    ]
+  constructor(private  _cursosServices: CursosService,
+              private  _alumnosServices: AlumnosService,
+              private  _profesoresServices: ProfesoresService){
 
 
-    this.nombreCurso= ""
-    this.nombreProfesor = profesorBase.nombre
+    this.cursosAll = this._cursosServices.getCursos();
+    this.alumnosAll = this._alumnosServices.getAlumnos();
+    this.profesoresAll = this._profesoresServices.getProfesores();
+
+    this.nombreCurso= this.cursosAll[0].nombreC
+    this.nombreProfesor = this.profesoresAll[0].nombreP;
     this.fotoProfesor= profesorBase.foto
-    this.nombreCurso="Mi curso de Programación"
+    this.nombreCurso=this.cursosAll[0].nombreC
     this.listado= "Curso"
     this.descripcion = "Aprende a programar desde cero"
     this.progreso= 0

@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { alumnosBD } from '../Models/alumnos';
+import { AlumnosService} from '../servicios/alumnos.service';
 
 @Component({
   selector: 'app-alumno',
   templateUrl: './alumno.component.html',
-  styleUrls: ['./alumno.component.css']
+  styleUrls: ['./alumno.component.css'],
+  providers: [AlumnosService]
 })
+
 export class AlumnoComponent implements OnInit{
 
   public alumnosAll: Array<alumnosBD>
@@ -15,22 +18,26 @@ export class AlumnoComponent implements OnInit{
   public edad: number
   public correoElectronico: string
   public notaAlumno: number
- 
-  
-  constructor(){
 
-    this.nombreAlumno=""
-    this.apellidoAlumno=""
-    this.edad = 0
-    this.correoElectronico= ""
+
+  constructor(private _alumnosService: AlumnosService){
+
+    this.alumnosAll = this._alumnosService.getAlumnos();
+    this.nombreAlumno= this.alumnosAll[0].nombreA;
+    this.apellidoAlumno= this.alumnosAll[0].apellidoA;
+    this.edad = this.alumnosAll[0].edadA
+    this.correoElectronico= this.alumnosAll[0].correoA
     this.cursosMatriculado= [[], []]
     this.notaAlumno= 5
-    this.alumnosAll=[
-      new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
-      new alumnosBD("Javier", "Diaz", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", true),
-      new alumnosBD("Chris", "Diaz", 24, "chris@gmail.com", "8975643", "./assets/media/fotommp.jpg", true),
-      new alumnosBD("Ana", "Quesada", 25, "ana@gmail.com", "8975643", "./assets/media/fotommp.jpg", false)
-    ]
+
+  }
+
+  getNombreAlumno(){
+    this.alumnosAll.forEach((alumno) =>{
+        this.nombreAlumno.push(alumno.nombreA);
+    });
+    console.log(this.nombreAlumno)
+
   }
 
   ngOnInit(){
