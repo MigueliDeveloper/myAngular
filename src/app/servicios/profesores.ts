@@ -22,7 +22,7 @@ export class ProfesoresService {
 
     }
 
-    getCursos(): Array<profesoresBD>{
+    getProfesores(): Array<profesoresBD>{
 
       return this.profesoresall
     }

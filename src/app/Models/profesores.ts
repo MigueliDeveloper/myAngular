@@ -1,10 +1,14 @@
 export class profesoresBD{
     constructor(
-        public nombreP: String,
-        public apellidoP: String,
-        public correo: String,
-        public foto: String,
-    ){}
+      public nombreP: string,
+      public apellidoP: string,
+      public correo: string,
+      public foto: string,
+      public cursosP: string,
+    ){
+    }
 
-   
+
+
+
 }

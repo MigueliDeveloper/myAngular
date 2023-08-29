@@ -1,14 +1,17 @@
 import { Component, OnInit} from '@angular/core';
 import { profesorBase } from '../Models/alumnos';
 import { alumnosBD } from '../Models/alumnos';
+import { AlumnosService } from '../servicios/alumnos.service';
 
 @Component({
   selector: 'app-curso',
   templateUrl: './curso.component.html',
-  styleUrls: ['./curso.component.css']
+  styleUrls: ['./curso.component.css'],
+  providers: [AlumnosService]
 })
+
 export class CursoComponent implements OnInit{
-  
+
   public alumnosAll: Array<alumnosBD>
   public nombreCurso: string
   public nombreProfesor: string
@@ -24,11 +27,11 @@ export class CursoComponent implements OnInit{
   constructor(){
     this.alumnosAll=[
       new alumnosBD("Miguel", "Ramírez", 39, "miguel@gmail.com", "1234567", "./assets/media/fotommp.jpg", true),
-      
+
       new alumnosBD("Javier", "Diaz", 19, "javier@gmail.com", "456789", "./assets/media/fotommp.jpg", false)
     ]
 
-    
+
     this.nombreCurso= ""
     this.nombreProfesor = profesorBase.nombre
     this.fotoProfesor= profesorBase.foto
@@ -38,7 +41,7 @@ export class CursoComponent implements OnInit{
     this.progreso= 0
     this.duracion = 0
     this.temarioCurso= ["Introducción a la programación", "Variables y tipos de datos", "Estructuras de control"]
-    this.notaAlumno= 0 
+    this.notaAlumno= 0
   }
 
   ngOnInit(){

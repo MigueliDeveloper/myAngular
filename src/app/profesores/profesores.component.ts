@@ -17,10 +17,10 @@ export class ProfesoresComponent implements OnInit{
 
   constructor(private _profesoresServices: ProfesoresService){
 
-    this.profesoresAll= new Array<profesoresBD>();
-    this.nombresProfesores= "";
-    this.apellidosProfesores= "";
-    this.cursosProfesores= "";
+    this.profesoresAll= this._profesoresServices.getProfesores();
+    this.nombresProfesores= this.profesoresAll[0].nombreP;
+    this.apellidosProfesores= this.profesoresAll[0].apellidoP;
+    this.cursosProfesores= this.profesoresAll[0].cursosP;
   }
 
   ngOnInit(){
