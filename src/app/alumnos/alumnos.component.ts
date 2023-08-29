@@ -22,10 +22,10 @@ export class AlumnosComponent implements OnInit{
 
   constructor(private _alumnosService: AlumnosService){
 
-    this.alumnosAll = new Array<alumnosBD>()
-    this.nombreAlumnos="";
-    this.apellidosAlumnos="";
-    this.fotoAlumno= ""
+    this.alumnosAll = this._alumnosService.getAlumnos();
+    this.nombreAlumnos= this.alumnosAll[0].nombreA;
+    this.apellidosAlumnos=this.alumnosAll[0].apellidoA;
+    this.fotoAlumno= this.alumnosAll[0].fotoA;
 
   }
 

@@ -24,7 +24,7 @@ export class ProfesoresComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.profesoresAll = this._profesoresServices.getCursos();
+    this.profesoresAll = this._profesoresServices.getProfesores();
     this.getNombreProfesor();
     this.getCorreoEle();
   }
