@@ -19,6 +19,7 @@ export class CursosComponent implements OnInit{
   public profesoresAll: Array<profesoresBD>;
   public nombreCursos: string // Manuel
   public nombreProfesor: string
+  public nombreAlumnos: string
   public fotoProfesor: string
   public duracionCursos: number
   public descripcion: string
@@ -36,6 +37,7 @@ export class CursosComponent implements OnInit{
     this.alumnosAll = new Array<alumnosBD>()
     this.profesoresAll = new Array<profesoresBD>()
     this.nombreProfesor = profesorBase.nombre
+    this.nombreAlumnos = ""
     this.fotoProfesor = profesorBase.foto
     this.nombreCursos="Cursos Programación"
     this.descripcion= "Aprende a programar desde cero"
@@ -49,6 +51,19 @@ export class CursosComponent implements OnInit{
     this.registrado= false
 
   }
+
+
+  ngOnInit(){
+    console.log("OnInit Ejecutado")
+    this.cursosAll = this._cursosServices.getCursos();
+    console.log(this.alumnosAll)
+    console.log(this.posicion)
+    this.getNombreCursos();
+    this.getDuracionCursos();
+    this.getNombreProfesores();
+    this.getNombreAlumnos();
+  }
+
 
   getNombreCursos(){
     this.cursosAll.forEach((curso) =>{
@@ -68,22 +83,20 @@ export class CursosComponent implements OnInit{
   }
 
   getNombreProfesores(){
-    this.cursosAll.forEach((nombreProfesor) =>{
-      this.nombreProfesor.push(nombreProfesor.nombreProfesor)
+    this.profesoresAll.forEach((nombreProfesor) =>{
+      this.nombreProfesor.push(nombreProfesor.nombreP)
     })
+
+    console.log(this.nombreProfesor)
   }
 
   getNombreAlumnos(){
-    
 
+    this.alumnosAll.forEach((alumno) =>{
+      this.nombreAlumnos.push(alumno.nombreA);
+    });
+    console.log(this.nombreAlumnos)
 
-  }
-
-  ngOnInit(){
-    console.log("OnInit Ejecutado")
-    this.cursosAll = this._cursosServices.getCursos();
-    console.log(this.alumnosAll)
-    console.log(this.posicion)
   }
 
   cambiarTitulo(){
@@ -101,7 +114,6 @@ export class CursosComponent implements OnInit{
   }
 
   Registrado(){
-
 
   }
 
