@@ -1,37 +1,39 @@
-<div id="alumnosContainer">
+<div class="my-grid my-card">
+  <div id="alumnosContainer">
 
-    <div class="alumnoFicha">
-      <h1 class="alumnoEnunciado">Ficha de los Alumnos del centro</h1>
-    
-      <div *ngFor="let alumnos of alumnosAll">
-        <img [src]="alumnos.fotoA" alt="Foto del alumno">
+      <div class="alumnoFicha">
+        <h1 class="alumnoEnunciado">Ficha de los Alumnos del centro</h1>
 
-        <h3 class="nombreAlumnos">{{ alumnos.nombreA }} {{ alumnos.apellidoA}}</h3>
-        <p class="atributosAlumnos">Edad: {{alumnos.edadA}}</p>
-        <p class="atributosAlumnos">Correo: {{ alumnos.correoA }}</p>
-        <p class="atributosAlumnos">Teléfono: {{ alumnos.telefonoA}}</p>
-        <p class="atributosAlumnos">Estado: {{ alumnos.estadoA ? 'Activo' : 'Inactivo' }}</p>
+        <div *ngFor="let alumnos of alumnosAll">
+          <img [src]="alumnos.fotoA" alt="Foto del alumno">
+
+          <h3 class="nombreAlumnos">{{ alumnos.nombreA }} {{ alumnos.apellidoA}}</h3>
+          <p class="atributosAlumnos">Edad: {{alumnos.edadA}}</p>
+          <p class="atributosAlumnos">Correo: {{ alumnos.correoA }}</p>
+          <p class="atributosAlumnos">Teléfono: {{ alumnos.telefonoA}}</p>
+          <p class="atributosAlumnos">Estado: {{ alumnos.estadoA ? 'Activo' : 'Inactivo' }}</p>
+
+        </div>
 
       </div>
 
-    </div>
-    
-    <ul>
-        <li *ngFor="let listado of alumnosAll">
-          {{listado.nombreA}}-{{listado.apellidoA}}
-          <span *ngif="listado.estadoA != false">MATRICULADO</span>
-        </li>
-      </ul>
-      <p>La nota media final es:</p>
+      <ul>
+          <li *ngFor="let listado of alumnosAll">
+            {{listado.nombreA}}-{{listado.apellidoA}}
+            <span *ngif="listado.estadoA != false">MATRICULADO</span>
+          </li>
+        </ul>
+        <p>La nota media final es:</p>
 
-      <ul [ngSwitch]="notasAlumnos">
-        <li *nSwitchCase="5">Aprobado</li>
-        <li *nSwitchCase="4">No Aprobado</li>
-        <li *nSwitchCase="7">Aprobado</li>
-      </ul>
+        <ul [ngSwitch]="notasAlumnos">
+          <li *nSwitchCase="5">Aprobado</li>
+          <li *nSwitchCase="4">No Aprobado</li>
+          <li *nSwitchCase="7">Aprobado</li>
+        </ul>
 
-    <p></p>
+      <p></p>
 
-    <button class="editar">Editar</button>
-    <button class="eliminar">Eliminar</button>
+      <button class="editar">Editar</button>
+      <button class="eliminar">Eliminar</button>
+  </div>
 </div>

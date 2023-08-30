@@ -1,66 +1,68 @@
-<div id="temarioProgreso">
-    <h1>Ficha de Cursos</h1>
+<div class="my-grid my-card">
+  <div id="temarioProgreso">
+      <h1>Ficha de Cursos</h1>
 
-    <p>{{ descripcion }}</p>
-  
-    <h2>Temario:</h2>
+      <p>{{ descripcion }}</p>
+
+      <h2>Temario:</h2>
+      <ul>
+        <li *ngFor="let tema of temario">
+          {{ tema }}
+        </li>
+      </ul>
+
+      <p>Progreso: {{ progreso }}%</p>
+
+      <button (click)="iniciarCurso()">Iniciar Curso</button>
+  </div>
+
+  <div>
+    <p>Profesor Asignado</p>
+    <h2>{{nombreProfesor}}</h2>
+    <img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
+
+    <p>Añadir Nota</p>
+    <input type="number" [(ngModel)]="nota">
+    <p>{{nota}}</p>
+
     <ul>
-      <li *ngFor="let tema of temario">
-        {{ tema }}
+      <li *ngFor="let listado of alumnosAll">
+        {{listado.nombreA}}-{{listado.apellidoA}}
+        <span *ngif="listado.estadoA != false">MATRICULADO</span>
       </li>
     </ul>
-  
-    <p>Progreso: {{ progreso }}%</p>
-  
-    <button (click)="iniciarCurso()">Iniciar Curso</button>
-</div>
 
-<div>
-  <p>Profesor Asignado</p>
-  <h2>{{nombreProfesor}}</h2>
-  <img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
+    <p>La nota media final es:</p>
 
-  <p>Añadir Nota</p>
-  <input type="number" [(ngModel)]="nota">
-  <p>{{nota}}</p>
+    <ul [ngSwitch]="notaAlumno">
+      <li *nSwitchCase="5">Aprobado</li>
+      <li *nSwitchCase="4">No Aprobado</li>
+      <li *nSwitchCase="7">Aprobado</li>
+    </ul>
 
-  <ul>
-    <li *ngFor="let listado of alumnosAll">
-      {{listado.nombreA}}-{{listado.apellidoA}}
-      <span *ngif="listado.estadoA != false">MATRICULADO</span>
-    </li>
-  </ul>
+    <h2>{{nombre}}</h2>
+    <h3>{{listado}}</h3>
 
-  <p>La nota media final es:</p>
-
-  <ul [ngSwitch]="notaAlumno">
-    <li *nSwitchCase="5">Aprobado</li>
-    <li *nSwitchCase="4">No Aprobado</li>
-    <li *nSwitchCase="7">Aprobado</li>
-  </ul>
-
-  <h2>{{nombre}}</h2>
-  <h3>{{listado}}</h3>
-
-  <button (click)="cambiarTitulo()">Cambiar Titulo</button>
-  <div class="galeria">
-    <img src="{{imagen+1}}" alt="Imagen de muestra">
-    <img src="{{imagen}}+imagen2.jpg" alt="Imagen de muestra">
-    <img src="{{imagen+3}}" alt="Imagen de muestra">
-    <img src="{{imagen+4}}" alt="Imagen de muestra">
-    <img src="{{imagen+5}}" alt="Imagen de muestra">
+    <button (click)="cambiarTitulo()">Cambiar Titulo</button>
+    <div class="galeria">
+      <img src="{{imagen+1}}" alt="Imagen de muestra">
+      <img src="{{imagen}}+imagen2.jpg" alt="Imagen de muestra">
+      <img src="{{imagen+3}}" alt="Imagen de muestra">
+      <img src="{{imagen+4}}" alt="Imagen de muestra">
+      <img src="{{imagen+5}}" alt="Imagen de muestra">
+    </div>
   </div>
+
+  <!-- [ng-template] -->
+  <div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
+
+  <ng-template #Siregistrado>
+    <p>Estás registrado en la aplicación</p>
+    <button (click)="unsetRegistrado()"></button>
+  </ng-template>
+  <ng-template #Noregistrado>
+      <p>No estas registrado, pulsa este botón para identificarte</p>
+      <button (click)="setRegistrado()"></button>
+
+  </ng-template>
 </div>
-
-<!-- [ng-template] -->
-<div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
-
-<ng-template #Siregistrado>
-  <p>Estás registrado en la aplicación</p>
-  <button (click)="unsetRegistrado()"></button>
-</ng-template>
-<ng-template #Noregistrado>
-    <p>No estas registrado, pulsa este botón para identificarte</p>
-    <button (click)="setRegistrado()"></button>
-
-</ng-template>
