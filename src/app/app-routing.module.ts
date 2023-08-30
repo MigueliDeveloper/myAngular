@@ -17,7 +17,7 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
 
 const routes: Routes = [
 // Solamente se van a usar los plurales
-  { path: '', component: AppComponent },
+  // { path: '', component: AppComponent },
   { path: 'curso', component: CursoComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'alumnos', component: AlumnosComponent },

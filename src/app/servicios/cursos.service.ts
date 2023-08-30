@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { cursosBD } from "../Models/cursos";
 
 @Injectable({
-  provideIn: 'root'
+  providedIn: 'root'
 })
 
 export class CursosService {

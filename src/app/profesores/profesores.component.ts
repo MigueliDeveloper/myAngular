@@ -6,14 +6,17 @@ import { ProfesoresService } from '../servicios/profesores';
   selector: 'app-profesores',
   templateUrl: './profesores.component.html',
   styleUrls: ['./profesores.component.css'],
-  providers: [ProfesoresService]
+  providers: [ ProfesoresService ],
 })
 
 export class ProfesoresComponent implements OnInit{
   public profesoresAll: Array<profesoresBD>;
   public nombresProfesores: string;
+  public nombresP: string[] = [];
   public apellidosProfesores: string;
   public cursosProfesores: string;
+
+  public correosEle: string[] = [];
 
   constructor(private _profesoresServices: ProfesoresService){
 
@@ -30,10 +33,9 @@ export class ProfesoresComponent implements OnInit{
   }
 
 
-
   getNombreProfesor(){
     this.profesoresAll.forEach((profesor) =>{
-      this.nombresProfesores.push(profesor.nombreP);
+      this.nombresP.push(profesor.nombreP);
     });
 
     console.log(this.nombresProfesores)
@@ -41,7 +43,7 @@ export class ProfesoresComponent implements OnInit{
 
   getCorreoEle(){
     this.profesoresAll.forEach((profesor) => {
-      this.cursosProfesores.push(profesor.correo);
+      this.correosEle.push(profesor.nombreP);
 
     });
 
@@ -55,11 +57,5 @@ export class ProfesoresComponent implements OnInit{
   // unsetRegistrado() {
   //   this.registrado = false;
   // }
-
-
-
-
-
-
 
 }

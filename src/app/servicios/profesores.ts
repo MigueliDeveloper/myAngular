@@ -11,9 +11,9 @@ export class ProfesoresService {
 
     constructor(){
       this.profesoresall= [
-        new profesoresBD( "Manolo", "Gonzalez","manologonzalez@gmail.com" ,"./assets/media/fotommp.jpg"),
-        new profesoresBD( "Antonio", "Sanchez","antoniosanchez@gmail.com" ,"./assets/media/fotommp.jpg"),
-        new profesoresBD( "Gilberto", "Lopez","gilbertolopez@gmail.com" ,"./assets/media/fotommp.jpg"),
+        new profesoresBD( "Manolo", "Gonzalez","manologonzalez@gmail.com" ,"./assets/media/fotommp.jpg", ""),
+        new profesoresBD( "Antonio", "Sanchez","antoniosanchez@gmail.com" ,"./assets/media/fotommp.jpg", ""),
+        new profesoresBD( "Gilberto", "Lopez","gilbertolopez@gmail.com" ,"./assets/media/fotommp.jpg", ""),
       ]
     }
 
