@@ -1,6 +1,6 @@
 *{
 
-    background-color: #f2f2f2;
+    background-color: #CDEAE8;
     padding: 40px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -24,26 +24,26 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
   /* Estilos para el nombre del alumno */
   .alumno-ficha .nombrelumno {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
   }
-  
+
   /* Estilos para la información del alumno */
   .alumno-ficha .info {
     font-size: 16px;
     margin-bottom: 5px;
   }
-  
+
   /* Estilos para el número de identificación del alumno */
   .alumno-ficha .identificacion {
     font-size: 14px;
     color: #888888;
   }
-  
+
   /* Estilos para la foto del alumno */
   .alumno-ficha .foto {
     width: 100px;
@@ -52,7 +52,7 @@
     overflow: hidden;
     margin-bottom: 10px;
   }
-  
+
   /* Estilos para el botón de editar */
   .alumno-ficha .editar {
     background-color: #4CAF50;
@@ -66,7 +66,7 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  
+
   /* Estilos para el botón de eliminar */
   .alumno-ficha .eliminar {
     background-color: #f44336;
