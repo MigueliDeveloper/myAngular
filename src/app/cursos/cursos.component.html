@@ -22,8 +22,8 @@
     <img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
 
     <p>Añadir Nota</p>
-    <input type="number" [(ngModel)]="nota">
-    <p>{{nota}}</p>
+    <input type="number" [(ngModel)]="notaA">
+    <p>{{notaA}}</p>
 
     <ul>
       <li *ngFor="let listado of alumnosAll">
@@ -34,13 +34,13 @@
 
     <p>La nota media final es:</p>
 
-    <ul [ngSwitch]="notaAlumno">
+    <ul [ngSwitch]="notaA">
       <li *nSwitchCase="5">Aprobado</li>
       <li *nSwitchCase="4">No Aprobado</li>
       <li *nSwitchCase="7">Aprobado</li>
     </ul>
 
-    <h2>{{nombre}}</h2>
+    <h2>{{nombreP}}</h2>
     <h3>{{listado}}</h3>
 
     <button (click)="cambiarTitulo()">Cambiar Titulo</button>

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { profesoresBD } from '../Models/profesores';
-import { ProfesoresService } from '../servicios/profesores';
+import { ProfesoresService} from '../servicios/profesores';
 @Component({
   selector: 'app-profesor',
   templateUrl: './profesor.component.html',
-  styleUrls: ['./profesor.component.css']
-  providers: [ProfesoresService]
+  styleUrls: ['./profesor.component.css'],
+  providers: [ProfesoresService],
 })
 
 export class ProfesorComponent implements OnInit{

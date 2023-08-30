@@ -11,13 +11,14 @@ import { AlumnosService} from '../servicios/alumnos.service';
 
 export class AlumnoComponent implements OnInit{
 
-  public alumnosAll: Array<alumnosBD>
-  public cursosMatriculado: [][]
-  public nombreAlumno: string
-  public apellidoAlumno: string
-  public edad: number
-  public correoElectronico: string
-  public notaAlumno: number
+  public alumnosAll: Array<alumnosBD>;
+  public cursosMatriculado: [][];
+  public nombreAlumno: string;
+  public nombreA: string [] = [];
+  public apellidoAlumno: string;
+  public edad: number;
+  public correoElectronico: string;
+  public notaAlumno: number;
 
 
   constructor(private _alumnosService: AlumnosService){
@@ -34,7 +35,7 @@ export class AlumnoComponent implements OnInit{
 
   getNombreAlumno(){
     this.alumnosAll.forEach((alumno) =>{
-        this.nombreAlumno.push(alumno.nombreA);
+        this.nombreA.push(alumno.nombreA);
     });
     console.log(this.nombreAlumno)
 
