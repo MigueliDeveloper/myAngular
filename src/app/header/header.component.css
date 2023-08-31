@@ -18,8 +18,40 @@
   align-items: center;
 }
 
+.header-nav nav ul{
+  list-style: none;
+  display: flex;
+  padding: 12px;
+}
+
+.header-nav nav ul li{
+  margin-right: 20px;
+  color: #333;
+  text-align: center;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+
+header nav li a:hover{
+  color: #333;
+  background-color: #ddd;
+}
+
 .header-login {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.header-login button {
+  background-color: lightseagreen;
+  text-decoration: none;
+  color: antiquewhite;
+  border-radius: 8%;
+}
+
+.header-login button:hover{
+  color: #333;
+  background-color: #ddd;
+}
+
