@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "expess": "^0.0.1-security"
+    "expess": "^0.0.1-security",
+    "mongoose": "^7.5.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
