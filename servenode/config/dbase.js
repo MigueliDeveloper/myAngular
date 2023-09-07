@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
-const DB_URI = 'mongodb://localhost:27017/Appweb'
+const DB_URI = 'mongodb://localhost:27017/myAngular'
 
 module.exports = () => {
-    
+
     const connect = () => {
 
         mongoose.connect(DB_URI,
