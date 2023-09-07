@@ -13,6 +13,7 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
 import { FormularioConsultaComponent } from './formulario-consulta/formulario-consulta.component';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
+import { CreacursoComponent } from './creacurso/creacurso.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'formularioAcceso', component: FormularioAccesoComponent },
   { path: 'formularioConsulta', component: FormularioConsultaComponent },
   { path: 'FormularioRegistro', component: FormularioRegistroComponent },
+  { path: 'crearCurso', component: CreacursoComponent}
 ];
 
 @NgModule({

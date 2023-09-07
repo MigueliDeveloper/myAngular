@@ -1,7 +1,15 @@
 <div class="container">
   <h2>{{title}}</h2>
 
-  <form action="ngForm" (ngSubmit)="onSubmit(cursoform)">
+  <div class="message success" *ngIf="status == 'success'">
+    El curso se ha creado correctamente, puedes <a [routerLink]="['/curso', save_curso._id]">verlo aquí</a>
+  </div>
+
+  <div class="message failed" *ngIf="status == 'failed'">
+    El curso NO SE HA CREADO   
+  </div>
+
+  <form #cursoform="ngForm" (ngSubmit)="onSubmit(cursoform)">
     <p>
       <label for="name">Nombre</label>
       <input type="text" id="name" name="name" #name="ngModel" [(ngModel)]="curso.name" required>
