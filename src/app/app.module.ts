@@ -15,9 +15,10 @@ import { FormularioRegistroComponent } from './formulario-registro/formulario-re
 import { FormularioConsultaComponent } from './formulario-consulta/formulario-consulta.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { CreacursoComponent } from './creacurso/creacurso.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     CursosComponent,
     CursoComponent,
@@ -29,8 +30,9 @@ import { FooterComponent } from './footer/footer.component';
     FormularioRegistroComponent,
     FormularioConsultaComponent,
     HeaderComponent,
-    FooterComponent
-  ],
+    FooterComponent,
+      CreacursoComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
