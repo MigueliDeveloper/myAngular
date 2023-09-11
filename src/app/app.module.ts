@@ -17,6 +17,7 @@ import { FormularioConsultaComponent } from './formulario-consulta/formulario-co
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreacursoComponent } from './creacurso/creacurso.component';
+import { GestioncursoserviceComponent } from './servicios/gestioncursoservice/gestioncursoservice.component';
 
 @NgModule({
   declarations: [	
@@ -32,7 +33,8 @@ import { CreacursoComponent } from './creacurso/creacurso.component';
     FormularioConsultaComponent,
     HeaderComponent,
     FooterComponent,
-      CreacursoComponent
+      CreacursoComponent,
+      GestioncursoserviceComponent
    ],
   imports: [
     BrowserModule,

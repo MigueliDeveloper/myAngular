@@ -12,7 +12,6 @@ const userRouters = require('./app/routes/user')
 app.use(userRouters)
 
 // Conexión con Base datos
-
 const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
