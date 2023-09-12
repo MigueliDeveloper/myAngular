@@ -30,6 +30,8 @@ export class TareasComponent {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
   }
 
+  // Parte del Todo
+
   todo = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
 
   done = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
@@ -48,6 +50,20 @@ export class TareasComponent {
       );
     }
   }
+
+  // Drap&Drop horizontal sorting
+  timePeriods = [
+    'Bronze age',
+    'Iron age',
+    'Middle ages',
+    'Early modern period',
+    'Long nineteenth century',
+  ];
+
+  drop3(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.timePeriods, event.previousIndex, event.currentIndex);
+  }
+
 }
 
 
