@@ -14,7 +14,7 @@ import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso
 import { FormularioConsultaComponent } from './formulario-consulta/formulario-consulta.component';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { CreacursoComponent } from './creacurso/creacurso.component';
-
+import { TareasComponent } from './tareas/tareas.component';
 
 const routes: Routes = [
 // Solamente se van a usar los plurales
@@ -28,7 +28,8 @@ const routes: Routes = [
   { path: 'formularioAcceso', component: FormularioAccesoComponent },
   { path: 'formularioConsulta', component: FormularioConsultaComponent },
   { path: 'FormularioRegistro', component: FormularioRegistroComponent },
-  { path: 'crearCurso', component: CreacursoComponent}
+  { path: 'crearCurso', component: CreacursoComponent},
+  { path: 'tareas', component: TareasComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,48 @@
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
+</div>
+
+<div class="example-container2">
+    <h2>To do</h2>
+  
+    <div
+      cdkDropList
+      #todoList="cdkDropList"
+      [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="[doneList, doneList2]"
+      class="example-list2"
+      (cdkDropListDropped)="drop2($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class="example-container2">
+    <h2>Done</h2>
+  
+    <div
+      cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList, doneList2]"
+      class="example-list2"
+      (cdkDropListDropped)="drop2($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container2">
+    <h2>Hecho</h2>
+  
+    <div
+      cdkDropList
+      #doneList2="cdkDropList"
+      [cdkDropListData]="hecho"
+      [cdkDropListConnectedTo]="[todoList, doneList]"
+
+      class="example-list2"
+      (cdkDropListDropped)="drop2($event)">
+      <div class="example-box" *ngFor="let item of hecho" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  

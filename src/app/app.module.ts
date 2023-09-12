@@ -17,9 +17,8 @@ import { FormularioConsultaComponent } from './formulario-consulta/formulario-co
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreacursoComponent } from './creacurso/creacurso.component';
-import { GestioncursoserviceComponent } from './servicios/gestioncursoservice/gestioncursoservice.component';
-
-@NgModule({
+import { TareasComponent } from './tareas/tareas.component';
+@NgModule({ 
   declarations: [	
     AppComponent,
     CursosComponent,
@@ -33,14 +32,16 @@ import { GestioncursoserviceComponent } from './servicios/gestioncursoservice/ge
     FormularioConsultaComponent,
     HeaderComponent,
     FooterComponent,
-      CreacursoComponent,
-      GestioncursoserviceComponent
+    CreacursoComponent,
+    
+
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule, 
+    TareasComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
