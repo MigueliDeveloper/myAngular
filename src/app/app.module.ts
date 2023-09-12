@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreacursoComponent } from './creacurso/creacurso.component';
 import { TareasComponent } from './tareas/tareas.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({ 
   declarations: [	
     AppComponent,
@@ -41,7 +42,7 @@ import { TareasComponent } from './tareas/tareas.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule, 
-    TareasComponent,
+    TareasComponent, BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
