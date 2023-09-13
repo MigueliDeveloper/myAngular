@@ -15,6 +15,8 @@ import { FormularioConsultaComponent } from './formulario-consulta/formulario-co
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { CreacursoComponent } from './creacurso/creacurso.component';
 import { TareasComponent } from './tareas/tareas.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
 // Solamente se van a usar los plurales
@@ -29,7 +31,9 @@ const routes: Routes = [
   { path: 'formularioConsulta', component: FormularioConsultaComponent },
   { path: 'FormularioRegistro', component: FormularioRegistroComponent },
   { path: 'crearCurso', component: CreacursoComponent},
-  { path: 'tareas', component: TareasComponent}
+  { path: 'tareas', component: TareasComponent},
+  { path: 'header', component: HeaderComponent },
+  { path: 'footer', component: FooterComponent},
 ];
 
 @NgModule({
