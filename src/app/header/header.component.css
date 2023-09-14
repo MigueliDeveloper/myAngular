@@ -1,4 +1,32 @@
-.header{
+* {
+  margin: 0;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.navbar-brand img{
+
+  height: 6vh;
+}
+
+.nav-item {
+
+  padding: 4px;
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+ul li{
+  text-decoration: none;
+
+}
+
+
+
+/*
+ .header{
   background-color: #00214A;
   color: #fff;
   font-family: sans-serif;
@@ -54,4 +82,5 @@ header nav li a:hover{
   color: #333;
   background-color: #ddd;
 }
+ */
 

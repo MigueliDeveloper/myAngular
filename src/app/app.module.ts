@@ -14,7 +14,7 @@ import { ProfesorComponent } from './profesor/profesor.component';
 import { FormularioAccesoComponent } from './formulario-acceso/formulario-acceso.component';
 import { FormularioRegistroComponent } from './formulario-registro/formulario-registro.component';
 import { FormularioConsultaComponent } from './formulario-consulta/formulario-consulta.component';
-// import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreacursoComponent } from './creacurso/creacurso.component';
 import { TareasComponent } from './tareas/tareas.component';
@@ -31,11 +31,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormularioAccesoComponent,
     FormularioRegistroComponent,
     FormularioConsultaComponent,
-    // HeaderComponent,
+    HeaderComponent,
     FooterComponent,
     CreacursoComponent,
     
-
    ],
   imports: [
     BrowserModule,

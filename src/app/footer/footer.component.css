@@ -1,3 +1,21 @@
+footer{
+  width: 100vw;
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 1980px;
+  /* padding: 10px;*/
+  height: 5vh; 
+  background-color: black;
+  
+}
+
 .footer {
   background-color: #fff;
   color: #00214A;
@@ -9,7 +27,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 25px;
 }
+
+.footer-logo img{
+  height: 6vh;
+  padding: 12px;
+} 
 
 .footer-social-media {
   display: flex;
@@ -21,4 +45,11 @@
 .footer-social-media a {
   display: block;
   margin-right: 10px;
+}
+
+.footer-social-media img{
+  height: 8vh;
+  padding: 16px;
+  margin-top: 15vh;
+
 }
