@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { profesoresBD } from '../Models/profesores';
 import { ProfesoresService } from '../servicios/profesores';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-profesores',
   templateUrl: './profesores.component.html',
   styleUrls: ['./profesores.component.css'],
   providers: [ ProfesoresService ],
+  standalone: true,
+  imports:[MatCardModule],
 })
 
 export class ProfesoresComponent implements OnInit{

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { MatCardModule}from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
@@ -26,7 +27,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CursoComponent,
     AlumnosComponent,
     AlumnoComponent,
-    ProfesoresComponent,
     ProfesorComponent,
     FormularioAccesoComponent,
     FormularioRegistroComponent,
@@ -34,7 +34,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     CreacursoComponent,
-    
    ],
   imports: [
     BrowserModule,
@@ -43,6 +42,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule, 
     TareasComponent, 
     BrowserAnimationsModule,
+    MatCardModule,
+    ProfesoresComponent,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
