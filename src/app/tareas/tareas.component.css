@@ -1,4 +1,4 @@
-*{
+/* *{
 
   background-color: #00214A;
 }
@@ -7,10 +7,7 @@ mat-card{
   margin-top: 10vh;
   margin-left: 25vw;
   
-  /*     
-  display: flex;
-  justify-content: center;
-  flex-direction: center; */
+
   
   width: 50vw;
 
@@ -20,7 +17,7 @@ mat-card{
 
   width: 20vw;
   height: 20vh;
-  /* max-width: 400px; */
+
 }
 
 img{
@@ -37,10 +34,9 @@ p{
   background-size: cover;
   width: 20vw;
   height: 20vh;
-}
+} 
+*/
 
-
-/* 
 .example-list {
     width: 500px;
     max-width: 100%;
@@ -135,4 +131,3 @@ p{
     flex-basis: 0;
   }
   
-   */

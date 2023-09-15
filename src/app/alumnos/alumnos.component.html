@@ -11,6 +11,7 @@
       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
       bred for hunting.
     </p>
+    <!-- 
     <div *ngFor="let alumnos of alumnosAll">
       <img [src]="alumnos.fotoA" alt="Foto del alumno">
 
@@ -19,16 +20,22 @@
       <p class="atributosAlumnos">Correo: {{ alumnos.correoA }}</p>
       <p class="atributosAlumnos">Teléfono: {{ alumnos.telefonoA}}</p>
       <p class="atributosAlumnos">Estado: {{ alumnos.estadoA ? 'Activo' : 'Inactivo' }}</p>
-    </div>
+    </div> 
+   -->
     <ul>
+      <!-- 
       <li *ngFor="let listado of alumnosAll">
         {{listado.nombreA}}-{{listado.apellidoA}}
         <span *ngif="listado.estadoA != false">MATRICULADO</span>
-      </li>
+      </li> 
+    -->
     </ul>
     <p>La nota media final es:</p>
 
-    <ul [ngSwitch]="notasAlumnos">
+    <!-- 
+      <ul [ngSwitch]="notasAlumnos"> 
+        -->
+    <ul []="notasAlumnos">
       <li *nSwitchCase="5">Aprobado</li>
       <li *nSwitchCase="4">No Aprobado</li>
       <li *nSwitchCase="7">Aprobado</li>
@@ -41,7 +48,6 @@
     <button mat-button>Eliminar</button>
   </mat-card-actions>
 </mat-card>
-
 
 
 <!-- 

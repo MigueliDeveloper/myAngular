@@ -23,9 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({ 
   declarations: [	
     AppComponent,
-    CursosComponent,
     CursoComponent,
-    AlumnosComponent,
     AlumnoComponent,
     ProfesorComponent,
     FormularioAccesoComponent,
@@ -44,6 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatCardModule,
     ProfesoresComponent,
+    CursosComponent,
+    AlumnosComponent,
     
   ],
   providers: [],

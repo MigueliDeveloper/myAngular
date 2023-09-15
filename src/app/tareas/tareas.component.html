@@ -1,4 +1,5 @@
-<mat-card class="exaple-card">
+<!-- 
+  <mat-card class="exaple-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>Ficha de Cursos</mat-card-title>
@@ -67,9 +68,8 @@
     <button mat-button>LIKE</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
-</mat-card>
-
-<!-- 
+</mat-card> 
+-->
 
 <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
     <div class="example-box" *ngFor="let movie of movies" cdkDrag>{{movie}}</div>
@@ -121,7 +121,7 @@
   <div cdkDropList cdkDropListOrientation="horizontal" class="example-list3" (cdkDropListDropped)="drop3($event)">
     <div class="example-box3" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
   </div>
- -->
+ 
 
   
   
