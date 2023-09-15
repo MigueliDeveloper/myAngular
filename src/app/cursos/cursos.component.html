@@ -1,3 +1,87 @@
+<mat-card class="exaple-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Ficha de Cursos</mat-card-title>
+    <mat-card-subtitle>Cursos</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+    <p>{{ descripcion }}</p>
+
+    <h2>Temario:</h2>
+    <ul>
+      <li *ngFor="let tema of temario">
+        {{ tema }}
+      </li>
+    </ul>
+
+    <p>Progreso: {{ progreso }}%</p>
+
+    <button (click)="iniciarCurso()">Iniciar Curso</button>
+
+    <p>Profesor Asignado</p>
+    <h2>{{nombreProfesor}}</h2>
+    <img src="{{fotoProfesor}}" alt="Foto del profesor" width="100px">
+
+    <p>Añadir Nota</p>
+    <input type="number" [(ngModel)]="notaA">
+    <p>{{notaA}}</p>
+
+    <ul>
+      <li *ngFor="let listado of alumnosAll">
+        {{listado.nombreA}}-{{listado.apellidoA}}
+        <span *ngif="listado.estadoA != false">MATRICULADO</span>
+      </li>
+    </ul>
+
+    <p>La nota media final es:</p>
+
+    <ul [ngSwitch]="notaA">
+      <li *nSwitchCase="5">Aprobado</li>
+      <li *nSwitchCase="4">No Aprobado</li>
+      <li *nSwitchCase="7">Aprobado</li>
+    </ul>
+
+    <h2>{{nombreP}}</h2>
+    <h3>{{listado}}</h3>
+
+    <button (click)="cambiarTitulo()">Cambiar Titulo</button>
+    <div class="galeria">
+      <img src="{{imagen+1}}" alt="Imagen de muestra">
+      <img src="{{imagen}}+imagen2.jpg" alt="Imagen de muestra">
+      <img src="{{imagen+3}}" alt="Imagen de muestra">
+      <img src="{{imagen+4}}" alt="Imagen de muestra">
+      <img src="{{imagen+5}}" alt="Imagen de muestra">
+    </div>
+
+  <!-- [ng-template] -->
+  <div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
+
+  <ng-template #Siregistrado>
+    <p>Estás registrado en la aplicación</p>
+    <button (click)="unsetRegistrado()"></button>
+  </ng-template>
+  <ng-template #Noregistrado>
+      <p>No estas registrado, pulsa este botón para identificarte</p>
+      <button (click)="setRegistrado()"></button>
+
+  </ng-template>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+
+
+<!-- 
 <div class="my-grid my-card">
   <div id="temarioProgreso">
       <h1>Ficha de Cursos</h1>
@@ -53,7 +137,7 @@
     </div>
   </div>
 
-  <!-- [ng-template] -->
+  [ng-template] 
   <div *ngIf="registrado; then Siregistrado else Noregistrado"></div>
 
   <ng-template #Siregistrado>
@@ -65,4 +149,5 @@
       <button (click)="setRegistrado()"></button>
 
   </ng-template>
-</div>
+</div> 
+-->

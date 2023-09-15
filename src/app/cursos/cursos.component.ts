@@ -6,12 +6,15 @@ import { cursosBD } from '../Models/cursos';
 import { CursosService } from '../servicios/cursos.service';
 import { AlumnosService } from '../servicios/alumnos.service';
 import { ProfesoresService } from '../servicios/profesores';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css'],
-  providers: [CursosService, AlumnosService, ProfesoresService]
+  providers: [CursosService, AlumnosService, ProfesoresService],
+  standalone: true,
+  imports:[MatCardModule],
 })
 
 export class CursosComponent implements OnInit{

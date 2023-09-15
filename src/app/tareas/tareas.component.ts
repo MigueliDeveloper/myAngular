@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
 import {NgFor} from '@angular/common';
 import {transferArrayItem} from '@angular/cdk/drag-drop';
+import {MatCardModule} from '@angular/material/card';
 
 /**
  * @title Drag&Drop sorting
@@ -11,8 +12,9 @@ import {transferArrayItem} from '@angular/cdk/drag-drop';
   templateUrl: './tareas.component.html',
   styleUrls: ['./tareas.component.css'],
   standalone: true,
-  imports: [CdkDropList, NgFor, CdkDrag],
+  imports: [CdkDropList, NgFor, CdkDrag, MatCardModule],
 })
+
 export class TareasComponent {
   movies = [
     'Episode I - The Phantom Menace',

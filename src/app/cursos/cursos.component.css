@@ -1,5 +1,48 @@
 *{
-    /* background-color: lightgoldenrodyellow; */
+
+    background-color: #00214A;
+}
+  
+mat-card{
+    margin-top: 10vh;
+    margin-left: 25vw;
+    
+    /*     
+    display: flex;
+    justify-content: center;
+    flex-direction: center; */
+    
+    width: 50vw;
+  
+}
+  
+  .example-card {
+  
+    width: 20vw;
+    height: 20vh;
+    /* max-width: 400px; */
+  }
+  
+  img{
+    width: 50vw;
+  }
+  
+  p{
+  
+    padding: 8px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    width: 20vw;
+    height: 20vh;
+  }
+
+
+/* 
+*
+    background-color: lightgoldenrodyellow; 
     padding: 12px;
 }
 
@@ -15,4 +58,6 @@
 
 .galeria img{
     height: 250px;
-}
+} 
+
+*/
