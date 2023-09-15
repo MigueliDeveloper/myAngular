@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+// Angular Material
 import { MatCardModule}from '@angular/material/card';
-
+import { CardWitchMultiSectionsComponent } from './extrasAngularMaterial/cardWithMultiSections/cardWithMultiSections.component';
+//
 import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursoComponent } from './curso/curso.component';
@@ -20,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CreacursoComponent } from './creacurso/creacurso.component';
 import { TareasComponent } from './tareas/tareas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({ 
   declarations: [	
     AppComponent,
@@ -32,6 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     CreacursoComponent,
+    AlumnosComponent,
+    CardWitchMultiSectionsComponent
    ],
   imports: [
     BrowserModule,
@@ -40,10 +45,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule, 
     TareasComponent, 
     BrowserAnimationsModule,
-    MatCardModule,
     ProfesoresComponent,
     CursosComponent,
-    AlumnosComponent,
+    MatCardModule
+   
     
   ],
   providers: [],
