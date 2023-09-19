@@ -3,10 +3,11 @@ const router = express.Router();
 const cursoÇontroller = require('../controllers/cursosController');
 
 // api / usuarios
-router.post('/', cursosController.crearUsuarios);
-router.get('/', cursosController.obtenerUsuarios);
-router.put('/:id', cursosController.actualizarUsuarios);
-router.get('/:id', cursosontroller.obtenerUsuarios);
-router.delete('/:id', cursosController.eliminarUsuarios);
+
+router.post('/', cursoÇontroller.crearCursos)
+router.get('/', cursoÇontroller.obtenerCursos);
+router.put('/:id', cursoÇontroller.actualizarCursos);
+router.get('/:id', cursoÇontroller.obtenerCursos);
+router.delete('/:id', cursoÇontroller.eliminarCursos);
 
 module.exports = router;
