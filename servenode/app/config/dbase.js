@@ -18,7 +18,7 @@ const conectarDB = async() => {
 
 }
 
-// module.exports = conectarDB
+module.exports = conectarDB
 
 
 // const DB_URI = 'mongodb://localhost:27017/myAngular'
