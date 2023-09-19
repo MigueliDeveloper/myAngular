@@ -24,7 +24,13 @@ const UsuariosSchema = mongoose.Schema({
     image: {
         type: String,
         required: true
+    },
+    fechaCreacion:{
+        type: Date,
+        default: Date.now()
     }
+
+    // nombre type: String required true, apellidos type: String required: true, FNacimineto type: String required: true, telefono: type String required: true, foto: type: String, required: true, fechaCreacion type Date,
 
 });
 

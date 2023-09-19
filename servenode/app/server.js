@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const conectarDB = require('./config/db')
+const conectarDB = require('./config/dbase')
 const cors = require("cors")
 
 // Creamos el servidor
@@ -20,13 +20,13 @@ app.listen(3001, () => {
 
 
 //Cursos
-app.use('/api/cursos', require('./app/cursosRouters'))
-app.use('/api/usuarios', require('./app/usuariosroutes'));
+app.use('/api/cursos', require('./routes/cursosroutes'));
+app.use('/api/usuarios', require('./routes/usuariosroutes'));
 //Mensajes
-app.use('/api/mensajes', require('./app/mensajesroutes'))
+app.use('/api/mensajes', require('./routes/mensajesroutes'));
 
 app.listen(3700, () => {
-    console.log('El servidor esta corrinedo perfectamente')
+    console.log('El servidor esta corrinedo perfectamente');
 })
 
 

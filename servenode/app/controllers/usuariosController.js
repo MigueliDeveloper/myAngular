@@ -5,8 +5,8 @@ exports.crearUsuarios = async(req, res) => {
         let usuario;
         // Creamos nuestro usuario
         usuario = new Usuarios(req.body);
-        await curso.save();
-        res.send(curso);
+        await usuario.save();
+        res.send(usuario);
 
     }catch(error){
         console.log(error);
@@ -26,20 +26,20 @@ exports.obtenerUsuarios = async(req, res) => {
 
 exports.actualizarUsuarios = async (req, res) => {
     try{
-        const { nombre, descripcion, categoria, duracion, temas} = req.body;
+        const { name, descripcion, category, duracion, temas, image, fechaCreacion} = req.body;
         let usuarios = await Usuarios.findById(req.params.id);
-        if(!curso){
+        if(!usuarios){
             res.status(404).json({ msg: 'No existe el Usuario'})
         }
 
-        usuarios.name = nameUsuarios;
-        usuarios.description = description;
+        usuarios.name = name;
+        usuarios.descripcion = descripcion;
         usuarios.category = category;
 		usuarios.duracion = duracion;
 		usuarios.temas = temas;
         usuarios.image = image;
-
         usuarios = await Usuarios.findOneAndUpdate({ _id: req.params.id }, curso, { new: true} )
+        
         res.json(usuarios);
     } catch(error){
         console.log(error);
@@ -48,13 +48,13 @@ exports.actualizarUsuarios = async (req, res) => {
 
 }
 
-exports.obtenerUsuarios = async (req, res) => {
+exports.obtenerUsuario = async (req, res) => {
 	try {
-        let usuario = await Usuarios.findById(req.params.id);
-        if(!usuario) {
-            res.status(404).json({ msg: 'No existe los Usuarios' })
+        let usuarios = await Usuarios.findById(req.params.id);
+        if(!usuarios) {
+            res.status(404).json({ msg: 'No existe el Usuario' })
         }     
-        res.json(usuario);       
+        res.json(usuarios);       
     } catch (error) {
         console.log(error);
         res.status(500).send('Hubo un error');
@@ -68,7 +68,7 @@ exports.eliminarUsarios = async (req, res) => {
 		if(!usuarios){
 			res.status(404).json({ msg: 'No existe los Usuarios'})
 		}
-		await Curso.findOneAndRemove({ _id: req.params.id })
+		await Usuarios.findOneAndRemove({ _id: req.params.id })
         res.json({ msg: 'Curso eliminado con exito' });       
     } catch (error) {
         console.log(error);
