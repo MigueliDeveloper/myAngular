@@ -13,7 +13,11 @@ app.use(cors())
 
 app.use(express.json());
 
+
+//Cursos
+app.use('/api/cursos', require('./app/cursosRouters'))
 app.use('/api/usuarios', require('./app/usuariosroutes'));
+//Mensajes
 
 app.listen(3700, () => {
     console.log('El servidor esta corrinedo perfectamente')
