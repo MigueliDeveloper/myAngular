@@ -15,7 +15,6 @@ const conectarDB = async() => {
         process.exit(1); // Detenemos la app
 
     }
-
 }
 
 module.exports = conectarDB
