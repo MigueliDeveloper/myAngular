@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const cursoÇontroller = require('../controllers/cursosController');
+const cursoController = require('../controllers/cursosController');
 
 // api / usuarios
-
-router.post('/', cursoÇontroller.crearCursos)
-router.get('/', cursoÇontroller.obtenerCursos);
-router.put('/:id', cursoÇontroller.actualizarCursos);
-router.get('/:id', cursoÇontroller.obtenerCursos);
-router.delete('/:id', cursoÇontroller.eliminarCursos);
+router.post('/', cursoController.crearCursos);
+router.get('/', cursoController.obtenerCursos);
+router.put('/:id', cursoController.actualizarCursos);
+router.get('/:id', cursoController.obtenerCursos);
+router.delete('/:id', cursoController.eliminarCursos);
 
 module.exports = router;
