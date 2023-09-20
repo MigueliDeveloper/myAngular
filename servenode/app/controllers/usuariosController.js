@@ -61,7 +61,7 @@ exports.obtenerUsuario = async (req, res) => {
     }
 }
 
-exports.eliminarUsarios = async (req, res) => {
+exports.eliminarUsuarios = async (req, res) => {
 	try {
 
 		let usuarios = await Usuarios.findById(req.params.id);
